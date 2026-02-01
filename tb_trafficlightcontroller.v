@@ -30,14 +30,14 @@ trafficlightcontroller dut(.clk(clk),.reset(reset),.sensor(sensor),.light_HW(lig
    
    // let full trafic cycle complete 
    // eniugh time to see yello + green + yellow
-   #2_000; // 2 seconds
+   #45; // 2 seconds
    
    // another vehicle arrives 
    sensor = 1;
    #1;
    sensor =0;
    // run simulation longer 
-   #3_000;
+   #50;
    $stop;
    
    end
